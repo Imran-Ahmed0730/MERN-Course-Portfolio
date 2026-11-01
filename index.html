@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arif Hossain — Front-End Developer and MERN Stack learner based in Dhaka, Bangladesh. Explore my skills, projects, education, and get in touch." />
+  <meta name="author" content="Arif Hossain" />
+  <meta name="theme-color" content="#070b14" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arif Hossain — Front-End Developer" />
+  <meta property="og:description" content="A responsive personal portfolio built with HTML, Tailwind CSS, and JavaScript." />
+  <meta property="og:image" content="assets/img/avatar.svg" />
+
+  <title>Arif Hossain — Front-End Developer &amp; MERN Learner</title>
+
+  <!-- Enable scroll-reveal styles only when JS is available -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agc3RvcC1jb2xvcj0iIzYzNjZmMSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzIyZDNlZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSJ1cmwoI2cpIi8+PHRleHQgeD0iMzIiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwNzEwMTgiPkE8L3RleHQ+PC9zdmc+" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Tailwind CSS (CDN, deferred) -->
+  <script src="https://cdn.tailwindcss.com" defer id="tailwind-cdn"></script>
+  <script>
+    document.getElementById("tailwind-cdn").addEventListener("load", function () {
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Outfit', 'Inter', 'ui-sans-serif', 'sans-serif'],
+            },
+            colors: {
+              ink: { 950: '#070b14', 900: '#0b1120', 800: '#0f172a', 700: '#16203a' },
+              brand: { 300: '#a5b4fc', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' },
+            },
+          },
+        },
+      };
+    });
+  </script>
+</head>
+
+<body class="bg-ink-950 font-sans text-slate-300 antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="site-header" class="site-header fixed inset-x-0 top-0 z-50">
+    <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <a href="#home" class="group flex items-center gap-2.5" aria-label="Arif Hossain — back to top">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        <span class="font-display text-lg font-semibold tracking-tight text-white">Arif<span class="text-cyan-300">.</span></span>
+      </a>
+
+      <ul class="hidden items-center gap-1 md:flex">
+        <li><a class="nav-link is-active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="hidden items-center gap-3 md:flex">
+        <a href="https://github.com/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub profile">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-primary btn-sm">Let's talk</a>
+      </div>
+
+      <button id="menu-toggle" type="button" class="menu-btn md:hidden" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu">
+        <svg id="menu-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" class="h-6 w-6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="menu-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" class="hidden h-6 w-6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+
+    <nav id="mobile-menu" class="mobile-menu md:hidden" aria-label="Mobile navigation" aria-hidden="true">
+      <ul class="space-y-1 px-4 pb-6 pt-2 sm:px-6">
+        <li><a class="mobile-link" href="#home">Home</a></li>
+        <li><a class="mobile-link" href="#about">About</a></li>
+        <li><a class="mobile-link" href="#skills">Skills</a></li>
+        <li><a class="mobile-link" href="#projects">Projects</a></li>
+        <li><a class="mobile-link" href="#contact">Contact</a></li>
+        <li class="pt-3">
+          <a href="#contact" class="btn btn-primary w-full">Let's talk</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero relative overflow-hidden pt-28 sm:pt-32 lg:pt-36">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="bg-grid absolute inset-0 -z-10" aria-hidden="true"></div>
+
+      <div class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28">
+        <div class="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+          <!-- Copy -->
+          <div>
+            <p class="reveal inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/5 px-3.5 py-1.5 text-xs font-medium text-emerald-300">
+              <span class="status-dot" aria-hidden="true"></span>
+              Available for internships &amp; freelance
+            </p>
+
+            <h1 class="reveal mt-6 font-display text-[2.6rem] font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl" style="--delay: 80ms">
+              Hi, I'm <span class="gradient-text">Arif Hossain</span>
+            </h1>
+
+            <p class="reveal mt-5 text-lg font-medium text-slate-300 sm:text-xl" style="--delay: 140ms">
+              Front-End Developer <span class="mx-1 text-slate-600">/</span> MERN Stack Learner
+            </p>
+
+            <p class="reveal mt-5 max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg" style="--delay: 200ms">
+              I'm a Computer Science student from Dhaka who loves turning ideas into fast,
+              accessible interfaces. I build with HTML, CSS, Tailwind&nbsp;CSS and JavaScript —
+              and I'm currently going deeper into the MERN stack.
+            </p>
+
+            <div class="reveal mt-8 flex flex-col gap-3 sm:flex-row sm:items-center" style="--delay: 260ms">
+              <a href="#projects" class="btn btn-primary">
+                View Projects
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                Contact Me
+              </a>
+            </div>
+
+            <div class="reveal mt-9 flex items-center gap-3" style="--delay: 320ms">
+              <span class="text-xs font-medium uppercase tracking-widest text-slate-500">Find me</span>
+              <span class="h-px w-6 bg-slate-700" aria-hidden="true"></span>
+              <div class="flex items-center gap-1.5">
+                <a href="https://github.com/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-[18px] w-[18px]"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-[18px] w-[18px]"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                </a>
+                <a href="mailto:arif.hossain.dev@gmail.com" class="icon-link" aria-label="Send an email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-[18px] w-[18px]"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portrait -->
+          <div class="reveal relative mx-auto w-full max-w-md lg:max-w-none" style="--delay: 180ms">
+            <div class="avatar-halo" aria-hidden="true"></div>
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <div class="avatar-shell">
+              <img src="assets/img/avatar.svg" alt="Illustrated portrait of Arif Hossain" class="h-auto w-full rounded-[2rem]" width="640" height="640" />
+            </div>
+
+            <div class="float-chip left-0 top-8 -ml-2 sm:-ml-6" aria-hidden="true">
+              <span class="chip-icon chip-icon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" class="h-3.5 w-3.5"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+              </span>
+              React
+            </div>
+
+            <div class="float-chip right-0 top-1/3 -mr-2 sm:-mr-5" style="animation-delay: -2s" aria-hidden="true">
+              <span class="chip-icon chip-icon-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" class="h-3.5 w-3.5"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+              </span>
+              Tailwind CSS
+            </div>
+
+            <div class="float-chip inset-x-0 bottom-6 mx-auto w-max" style="animation-delay: -4s" aria-hidden="true">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span class="text-slate-300">Open to work</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <dl class="reveal mt-16 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/5 pt-8 sm:gap-8" style="--delay: 380ms">
+          <div>
+            <dt class="text-xs font-medium uppercase tracking-widest text-slate-500">Projects</dt>
+            <dd class="mt-1 font-display text-2xl font-semibold text-white sm:text-3xl">10<span class="text-cyan-300">+</span></dd>
+          </div>
+          <div class="border-l border-white/5 pl-4 sm:pl-8">
+            <dt class="text-xs font-medium uppercase tracking-widest text-slate-500">Technologies</dt>
+            <dd class="mt-1 font-display text-2xl font-semibold text-white sm:text-3xl">12<span class="text-cyan-300">+</span></dd>
+          </div>
+          <div class="border-l border-white/5 pl-4 sm:pl-8">
+            <dt class="text-xs font-medium uppercase tracking-widest text-slate-500">Learning</dt>
+            <dd class="mt-1 font-display text-2xl font-semibold text-white sm:text-3xl">2<span class="ml-1 text-sm font-medium text-slate-400">yrs</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <!-- Facts card -->
+          <div class="reveal lg:order-2">
+            <div class="profile-card">
+              <div class="flex items-center gap-4">
+                <img src="assets/img/avatar.svg" alt="" class="h-16 w-16 rounded-2xl border border-white/10 object-cover" width="64" height="64" aria-hidden="true" />
+                <div>
+                  <p class="font-display text-lg font-semibold text-white">Arif Hossain</p>
+                  <p class="text-sm text-slate-400">Front-End Developer</p>
+                </div>
+                <span class="ml-auto rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-[11px] font-semibold text-emerald-300">Open</span>
+              </div>
+
+              <dl class="mt-7 space-y-4 text-sm">
+                <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-4">
+                  <dt class="text-slate-500">Location</dt>
+                  <dd class="text-right font-medium text-slate-200">Dhaka, Bangladesh</dd>
+                </div>
+                <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-4">
+                  <dt class="text-slate-500">Education</dt>
+                  <dd class="text-right font-medium text-slate-200">BSc in CSE, DU</dd>
+                </div>
+                <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-4">
+                  <dt class="text-slate-500">Focus</dt>
+                  <dd class="text-right font-medium text-slate-200">Frontend &amp; MERN</dd>
+                </div>
+                <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-4">
+                  <dt class="text-slate-500">Learning</dt>
+                  <dd class="text-right font-medium text-slate-200">Next.js, TypeScript</dd>
+                </div>
+                <div class="flex items-start justify-between gap-4">
+                  <dt class="text-slate-500">Languages</dt>
+                  <dd class="text-right font-medium text-slate-200">Bangla, English</dd>
+                </div>
+              </dl>
+
+              <a href="#contact" class="btn btn-soft mt-7 w-full">
+                Let's work together
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+
+            <div class="mt-4 rounded-2xl border border-white/5 bg-white/[0.02] p-5">
+              <p class="text-sm leading-relaxed text-slate-400">
+                <span class="font-semibold text-slate-200">Currently building:</span>
+                a MERN task manager with authentication, and a small design system in Tailwind CSS.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="lg:order-1">
+            <p class="eyebrow reveal">About me</p>
+            <h2 class="section-title reveal mt-4" style="--delay: 60ms">
+              Turning ideas into <span class="gradient-text">clean, usable</span> interfaces.
+            </h2>
+            <div class="mt-6 space-y-5 text-base leading-relaxed text-slate-400 reveal" style="--delay: 120ms">
+              <p>
+                I'm a Computer Science &amp; Engineering student at the University of Dhaka.
+                What started as curiosity about how websites work turned into a habit of
+                building something new every week.
+              </p>
+              <p>
+                Today I focus on front-end development with a strong eye for responsive layouts,
+                readable code, and the small details that make an interface feel effortless.
+                I'm working towards becoming a full-stack MERN developer and collaborating with
+                teams that care about good products.
+              </p>
+              <p>
+                Outside of code, I enjoy sketching interface ideas, following design trends,
+                and playing football with friends — then bringing the best ideas back into
+                my next build.
+              </p>
+            </div>
+
+            <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+              <li class="goal-item reveal" style="--delay: 160ms">
+                <span class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="m5 12 5 5L20 7"/></svg>
+                </span>
+                Build accessible, mobile-first websites
+              </li>
+              <li class="goal-item reveal" style="--delay: 200ms">
+                <span class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="m5 12 5 5L20 7"/></svg>
+                </span>
+                Grow into a full-stack MERN engineer
+              </li>
+              <li class="goal-item reveal" style="--delay: 240ms">
+                <span class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="m5 12 5 5L20 7"/></svg>
+                </span>
+                Contribute to open-source projects
+              </li>
+              <li class="goal-item reveal" style="--delay: 280ms">
+                <span class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="m5 12 5 5L20 7"/></svg>
+                </span>
+                Keep learning something new every week
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section section-alt">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="eyebrow reveal">Skills</p>
+          <h2 class="section-title reveal mt-4" style="--delay: 60ms">
+            Tools I use to <span class="gradient-text">ship things</span>.
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-slate-400 reveal" style="--delay: 120ms">
+            My everyday toolkit, from the first line of markup to deploying a full-stack app.
+            Percentages are my own honest confidence levels — always moving up.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="skill-card reveal">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">HTML &amp; CSS</h3>
+                <p class="text-xs text-slate-500">Semantic markup, layouts</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">95%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="HTML and CSS proficiency" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="95"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 60ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="h-5 w-5"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Tailwind CSS</h3>
+                <p class="text-xs text-slate-500">Utility-first styling</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">90%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="Tailwind CSS proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="90"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 120ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5a2 2 0 0 0 2 2h1"/><path d="M16 3h1a2 2 0 0 1 2 2v5a2 2 0 0 0 2 2 2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">JavaScript</h3>
+                <p class="text-xs text-slate-500">ES6+, DOM, APIs</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">85%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="JavaScript proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="85"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 180ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="h-5 w-5"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4.2"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">React</h3>
+                <p class="text-xs text-slate-500">Components, hooks</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">75%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="React proficiency" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="75"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 60ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect x="3" y="3" width="18" height="7" rx="2"/><rect x="3" y="14" width="18" height="7" rx="2"/><path d="M7 6.5h.01M7 17.5h.01"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Node &amp; Express</h3>
+                <p class="text-xs text-slate-500">REST APIs, auth</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">70%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="Node and Express proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="70"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 120ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">MongoDB</h3>
+                <p class="text-xs text-slate-500">Schemas, queries</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">65%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="MongoDB proficiency" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="65"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 180ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M6 3v12M18 9a9 9 0 0 1-9 9"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Git &amp; GitHub</h3>
+                <p class="text-xs text-slate-500">Version control, PRs</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">80%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="Git and GitHub proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="80"></span></div>
+          </article>
+
+          <article class="skill-card reveal" style="--delay: 240ms">
+            <div class="flex items-center gap-3">
+              <span class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+              </span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">UI &amp; Figma</h3>
+                <p class="text-xs text-slate-500">Wireframes, prototyping</p>
+              </div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs"><span class="text-slate-500">Confidence</span><span class="font-semibold text-cyan-300">70%</span></div>
+            <div class="skill-track mt-2" role="progressbar" aria-label="UI design and Figma proficiency" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span class="skill-fill" data-level="70"></span></div>
+          </article>
+        </div>
+
+        <div class="reveal mt-10 flex flex-wrap items-center gap-2">
+          <span class="mr-2 text-xs font-medium uppercase tracking-widest text-slate-500">Also comfortable with</span>
+          <span class="chip">Responsive design</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Vite</span>
+          <span class="chip">JWT auth</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Netlify</span>
+          <span class="chip">Vercel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div class="max-w-2xl">
+            <p class="eyebrow reveal">Projects</p>
+            <h2 class="section-title reveal mt-4" style="--delay: 60ms">
+              A few things I've <span class="gradient-text">built</span>.
+            </h2>
+            <p class="mt-5 text-base leading-relaxed text-slate-400 reveal" style="--delay: 120ms">
+              Selected work from my learning journey. Each project taught me something new
+              about structure, state, or shipping.
+            </p>
+          </div>
+          <a href="https://github.com/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm reveal shrink-0" style="--delay: 160ms">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-4 w-4"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            All repositories
+          </a>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="assets/img/project-devfolio.svg" alt="Preview of the DevFolio portfolio website with a dark hero section and profile card" loading="lazy" width="800" height="500" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <span class="project-badge">Featured</span>
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag">HTML</span><span class="tag">Tailwind CSS</span><span class="tag">JavaScript</span>
+              </div>
+              <h3 class="mt-4 font-display text-xl font-semibold text-white">DevFolio</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">
+                A dark, responsive portfolio template with smooth-scroll navigation,
+                animated sections, and a mobile-first layout.
+              </p>
+              <div class="mt-auto flex items-center gap-2 pt-6">
+                <a href="https://example.com/devfolio" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm flex-1">
+                  Live Demo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a href="https://github.com/arif-hossain-dev/devfolio" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm flex-1">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" style="--delay: 100ms">
+            <div class="project-media">
+              <img src="assets/img/project-taskflow.svg" alt="Preview of TaskFlow, a task manager dashboard with columns of task cards" loading="lazy" width="800" height="500" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag">JavaScript</span><span class="tag">CSS</span><span class="tag">localStorage</span>
+              </div>
+              <h3 class="mt-4 font-display text-xl font-semibold text-white">TaskFlow</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">
+                A task manager with kanban columns, drag-free status changes, filters,
+                and localStorage persistence so nothing gets lost.
+              </p>
+              <div class="mt-auto flex items-center gap-2 pt-6">
+                <a href="https://example.com/taskflow" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm flex-1">
+                  Live Demo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a href="https://github.com/arif-hossain-dev/taskflow" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm flex-1">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" style="--delay: 200ms">
+            <div class="project-media">
+              <img src="assets/img/project-shoplane.svg" alt="Preview of ShopLane, an e-commerce storefront with a product grid and cart" loading="lazy" width="800" height="500" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag">React</span><span class="tag">Tailwind CSS</span><span class="tag">Vite</span>
+              </div>
+              <h3 class="mt-4 font-display text-xl font-semibold text-white">ShopLane</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-400">
+                A responsive e-commerce storefront with product filtering, a slide-out cart,
+                and a reusable React component architecture.
+              </p>
+              <div class="mt-auto flex items-center gap-2 pt-6">
+                <a href="https://example.com/shoplane" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm flex-1">
+                  Live Demo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a href="https://github.com/arif-hossain-dev/shoplane" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm flex-1">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section section-alt">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div>
+            <p class="eyebrow reveal">Education</p>
+            <h2 class="section-title reveal mt-4" style="--delay: 60ms">
+              The path so <span class="gradient-text">far</span>.
+            </h2>
+            <p class="mt-5 text-base leading-relaxed text-slate-400 reveal" style="--delay: 120ms">
+              A mix of formal computer science education and hands-on, self-driven learning.
+            </p>
+
+            <div class="mt-8 rounded-2xl border border-white/5 bg-white/[0.02] p-5 reveal" style="--delay: 160ms">
+              <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-cyan-300">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+                Beyond the classroom
+              </div>
+              <p class="mt-3 text-sm leading-relaxed text-slate-400">
+                I learn best by building. Alongside my degree I complete online courses,
+                rebuild interfaces I admire, and document what I learn on GitHub.
+              </p>
+            </div>
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <div class="edu-card">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="year-pill">2022 — 2026</span>
+                  <span class="text-xs font-medium text-emerald-300">Expected</span>
+                </div>
+                <h3 class="mt-3 font-display text-lg font-semibold text-white">BSc in Computer Science &amp; Engineering</h3>
+                <p class="mt-1 text-sm font-medium text-brand-300">University of Dhaka</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-400">
+                  CGPA 3.72 / 4.00. Coursework in data structures, algorithms, database
+                  systems, web technologies, and software engineering.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item reveal" style="--delay: 100ms">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <div class="edu-card">
+                <span class="year-pill">2025 — Present</span>
+                <h3 class="mt-3 font-display text-lg font-semibold text-white">MERN Stack Web Development</h3>
+                <p class="mt-1 text-sm font-medium text-brand-300">Online bootcamp &amp; self-paced learning</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-400">
+                  Building full-stack applications with React, Node.js, Express, and MongoDB,
+                  including authentication, REST APIs, and deployment.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item reveal" style="--delay: 200ms">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <div class="edu-card">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="year-pill">2019 — 2021</span>
+                  <span class="text-xs font-medium text-slate-400">GPA 5.00 / 5.00</span>
+                </div>
+                <h3 class="mt-3 font-display text-lg font-semibold text-white">Higher Secondary Certificate — Science</h3>
+                <p class="mt-1 text-sm font-medium text-brand-300">Notre Dame College, Dhaka</p>
+                <p class="mt-3 text-sm leading-relaxed text-slate-400">
+                  Physics, Chemistry, and Mathematics, with early exposure to programming
+                  through the college science club.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section relative overflow-hidden">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <!-- Info -->
+          <div>
+            <p class="eyebrow reveal">Contact</p>
+            <h2 class="section-title reveal mt-4" style="--delay: 60ms">
+              Let's build something <span class="gradient-text">together</span>.
+            </h2>
+            <p class="mt-5 max-w-lg text-base leading-relaxed text-slate-400 reveal" style="--delay: 120ms">
+              Have a project, an internship opportunity, or just want to say hi?
+              My inbox is always open — I usually reply within a day.
+            </p>
+
+            <div class="mt-8 space-y-3">
+              <a href="mailto:arif.hossain.dev@gmail.com" class="contact-item reveal" style="--delay: 160ms">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </span>
+                <span>
+                  <span class="block text-xs uppercase tracking-widest text-slate-500">Email</span>
+                  <span class="mt-0.5 block text-sm font-medium text-slate-200">arif.hossain.dev@gmail.com</span>
+                </span>
+              </a>
+
+              <a href="tel:+8801700000000" class="contact-item reveal" style="--delay: 200ms">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+                </span>
+                <span>
+                  <span class="block text-xs uppercase tracking-widest text-slate-500">Phone</span>
+                  <span class="mt-0.5 block text-sm font-medium text-slate-200">+880 1700 000000</span>
+                </span>
+              </a>
+
+              <div class="contact-item reveal" style="--delay: 240ms">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span>
+                  <span class="block text-xs uppercase tracking-widest text-slate-500">Location</span>
+                  <span class="mt-0.5 block text-sm font-medium text-slate-200">Dhaka, Bangladesh</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-8 reveal" style="--delay: 280ms">
+              <p class="text-xs font-medium uppercase tracking-widest text-slate-500">Prefer social?</p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <a href="https://github.com/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-4 w-4"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-4 w-4"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="reveal" style="--delay: 160ms">
+            <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+              <div class="flex items-center justify-between gap-4">
+                <h3 class="font-display text-lg font-semibold text-white">Send me a message</h3>
+                <span class="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-400">Demo form</span>
+              </div>
+
+              <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="name" class="field-label">Name</label>
+                  <input type="text" id="name" name="name" class="field-input" placeholder="Your name" autocomplete="name" required aria-describedby="name-error" />
+                  <p id="name-error" class="error-msg" aria-live="polite"></p>
+                </div>
+                <div>
+                  <label for="email" class="field-label">Email</label>
+                  <input type="email" id="email" name="email" class="field-input" placeholder="you@example.com" autocomplete="email" required aria-describedby="email-error" />
+                  <p id="email-error" class="error-msg" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="mt-5">
+                <label for="message" class="field-label">Message</label>
+                <textarea id="message" name="message" rows="6" class="field-input resize-y" placeholder="Tell me a little about your project or idea..." required aria-describedby="message-error"></textarea>
+                <p id="message-error" class="error-msg" aria-live="polite"></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-6 w-full sm:w-auto">
+                Send message
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+
+              <p id="form-status" class="form-status" role="status" aria-live="polite">
+                <span class="status-check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="m5 12 5 5L20 7"/></svg>
+                </span>
+                Thanks! Your message has been captured. This demo form doesn't send email yet.
+              </p>
+              <p class="mt-5 text-xs leading-relaxed text-slate-500">
+                This form is a front-end demo. To receive messages, connect it to a service
+                like Formspree or a small Node/Express endpoint.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-white/5 bg-ink-950">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
+        <div>
+          <a href="#home" class="flex items-center gap-2.5" aria-label="Arif Hossain — back to top">
+            <span class="logo-mark" aria-hidden="true">A</span>
+            <span class="font-display text-lg font-semibold tracking-tight text-white">Arif<span class="text-cyan-300">.</span></span>
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
+            Front-end developer and MERN learner based in Dhaka. I build clean,
+            responsive web experiences — one project at a time.
+          </p>
+          <div class="mt-5 flex items-center gap-2">
+            <a href="https://github.com/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-[18px] w-[18px]"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.42.36.79 1.07.79 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arif-hossain-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-[18px] w-[18px]"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+            <a href="mailto:arif.hossain.dev@gmail.com" class="icon-link" aria-label="Send an email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-[18px] w-[18px]"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500">Explore</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-500">Get in touch</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="mailto:arif.hossain.dev@gmail.com" class="footer-link break-all">arif.hossain.dev@gmail.com</a></li>
+            <li><a href="tel:+8801700000000" class="footer-link">+880 1700 000000</a></li>
+            <li><span class="text-slate-500">Dhaka, Bangladesh</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-soft btn-sm mt-5">
+            Start a conversation
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
+        <p class="text-xs text-slate-500">
+          &copy; <span id="year">2026</span> Arif Hossain. All rights reserved.
+        </p>
+        <p class="text-xs text-slate-500">Built with HTML, Tailwind CSS &amp; a lot of coffee.</p>
+        <a href="#home" class="text-xs font-medium text-slate-400 transition-colors hover:text-white">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="to-top" type="button" class="to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="DevFolio project preview">
+  <defs>
+    <linearGradient id="df-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1120"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="df-brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a5b4fc"/>
+      <stop offset="0.55" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <linearGradient id="df-btn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <radialGradient id="df-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="df-avatar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <clipPath id="df-clip"><rect width="800" height="500" rx="18"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#df-clip)">
+    <rect width="800" height="500" fill="url(#df-bg)"/>
+
+    <!-- browser chrome -->
+    <rect width="800" height="44" fill="#0f172a"/>
+    <circle cx="24" cy="22" r="5" fill="#f87171" opacity="0.85"/>
+    <circle cx="42" cy="22" r="5" fill="#fbbf24" opacity="0.85"/>
+    <circle cx="60" cy="22" r="5" fill="#34d399" opacity="0.85"/>
+    <rect x="300" y="13" width="200" height="18" rx="9" fill="#1e293b"/>
+    <text x="400" y="26" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">arifhossain.dev</text>
+    <path d="M20 44h760" stroke="#1e293b" stroke-width="1"/>
+
+    <ellipse cx="620" cy="250" rx="270" ry="210" fill="url(#df-glow)"/>
+
+    <!-- nav -->
+    <rect x="56" y="76" width="26" height="26" rx="8" fill="url(#df-btn)"/>
+    <text x="69" y="94" font-family="Outfit, Arial, sans-serif" font-size="15" font-weight="800" fill="#071018" text-anchor="middle">A</text>
+    <text x="92" y="95" font-family="Outfit, Arial, sans-serif" font-size="16" font-weight="700" fill="#f8fafc">Arif<tspan fill="#67e8f9">.</tspan></text>
+    <g font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">
+      <text x="520" y="93">Home</text>
+      <text x="560" y="93">About</text>
+      <text x="602" y="93">Skills</text>
+      <text x="644" y="93">Projects</text>
+    </g>
+    <rect x="694" y="78" width="52" height="22" rx="7" fill="url(#df-btn)"/>
+    <text x="720" y="93" font-family="Inter, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#fff" text-anchor="middle">Contact</text>
+
+    <!-- hero copy -->
+    <rect x="56" y="142" width="130" height="22" rx="11" fill="#34d399" opacity="0.1" stroke="#34d399" stroke-opacity="0.25"/>
+    <circle cx="68" cy="153" r="3" fill="#34d399"/>
+    <text x="77" y="157" font-family="Inter, Arial, sans-serif" font-size="8.5" fill="#6ee7b7">Available for work</text>
+
+    <text x="56" y="206" font-family="Outfit, Arial, sans-serif" font-size="30" font-weight="600" fill="#e2e8f0">Hi, I'm</text>
+    <text x="56" y="250" font-family="Outfit, Arial, sans-serif" font-size="42" font-weight="800" fill="url(#df-brand)">Arif Hossain</text>
+    <text x="56" y="276" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Front-End Developer / MERN Stack Learner</text>
+
+    <rect x="56" y="296" width="304" height="7" rx="3.5" fill="#334155"/>
+    <rect x="56" y="311" width="278" height="7" rx="3.5" fill="#1e293b"/>
+    <rect x="56" y="326" width="232" height="7" rx="3.5" fill="#1e293b"/>
+
+    <rect x="56" y="358" width="110" height="34" rx="10" fill="url(#df-btn)"/>
+    <text x="111" y="379" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fff" text-anchor="middle">View Projects</text>
+    <rect x="176" y="358" width="100" height="34" rx="10" fill="none" stroke="#334155"/>
+    <text x="226" y="379" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#cbd5e1" text-anchor="middle">Contact Me</text>
+
+    <!-- social dots -->
+    <g fill="#334155">
+      <circle cx="62" cy="420" r="9"/><circle cx="86" cy="420" r="9"/><circle cx="110" cy="420" r="9"/>
+    </g>
+    <g fill="#94a3b8">
+      <circle cx="62" cy="420" r="3"/><circle cx="86" cy="420" r="3"/><circle cx="110" cy="420" r="3"/>
+    </g>
+
+    <!-- portrait -->
+    <circle cx="622" cy="250" r="102" fill="url(#df-avatar)" stroke="#818cf8" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="622" cy="250" r="88" fill="#0f172a" opacity="0.4"/>
+    <path d="M562 340c4-42 27-62 60-62s56 20 60 62Z" fill="#4338ca"/>
+    <circle cx="622" cy="230" r="38" fill="#e2a97f"/>
+    <path d="M584 222c0-32 15-48 38-48s38 16 38 48c-6-16-14-24-26-26-8-8-16-10-24-4-14 2-22 12-26 30Z" fill="#101827"/>
+    <rect x="596" y="228" width="24" height="15" rx="6" fill="none" stroke="#1e293b" stroke-width="3"/>
+    <rect x="626" y="228" width="24" height="15" rx="6" fill="none" stroke="#1e293b" stroke-width="3"/>
+    <path d="M620 234h6" stroke="#1e293b" stroke-width="3"/>
+    <circle cx="608" cy="236" r="2.5" fill="#111827"/>
+    <circle cx="638" cy="236" r="2.5" fill="#111827"/>
+    <path d="M613 254c6 5 12 5 18 0" fill="none" stroke="#a85f45" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- floating chips -->
+    <g font-family="Inter, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#e2e8f0">
+      <rect x="508" y="128" width="76" height="26" rx="8" fill="#0d1424" stroke="#334155"/>
+      <circle cx="522" cy="141" r="5" fill="#22d3ee" opacity="0.25"/>
+      <text x="532" y="144">Tailwind</text>
+      <rect x="664" y="326" width="70" height="26" rx="8" fill="#0d1424" stroke="#334155"/>
+      <circle cx="678" cy="339" r="5" fill="#818cf8" opacity="0.3"/>
+      <text x="688" y="342">React</text>
+    </g>
+
+    <!-- stats -->
+    <path d="M56 448h360" stroke="#1e293b"/>
+    <g font-family="Outfit, Arial, sans-serif">
+      <text x="56" y="472" font-size="15" font-weight="700" fill="#f8fafc">10+</text>
+      <text x="100" y="472" font-size="15" font-weight="700" fill="#f8fafc">12+</text>
+      <text x="144" y="472" font-size="15" font-weight="700" fill="#f8fafc">2 yrs</text>
+    </g>
+    <g font-family="Inter, Arial, sans-serif" font-size="7" fill="#64748b">
+      <text x="56" y="484">PROJECTS</text>
+      <text x="100" y="484">TECHNOLOGIES</text>
+      <text x="144" y="484">LEARNING</text>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="499" rx="17.5" fill="none" stroke="#94a3b8" stroke-opacity="0.14"/>
+</svg>

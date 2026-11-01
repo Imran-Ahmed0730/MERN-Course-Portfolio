@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img" aria-label="Illustrated portrait of Arif Hossain">
+  <defs>
+    <linearGradient id="a-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#131c33"/>
+      <stop offset="0.55" stop-color="#0b1120"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <radialGradient id="a-glow" cx="50%" cy="45%" r="50%">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#4338ca" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0b1120" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="a-hoodie" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="a-hair" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#26334d"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <linearGradient id="a-skin" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#f7cead"/>
+      <stop offset="1" stop-color="#e2a97f"/>
+    </linearGradient>
+    <linearGradient id="a-ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#818cf8" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0.15"/>
+    </linearGradient>
+    <clipPath id="a-clip">
+      <rect width="640" height="640" rx="64"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#a-clip)">
+    <rect width="640" height="640" fill="url(#a-bg)"/>
+    <circle cx="320" cy="300" r="290" fill="url(#a-glow)"/>
+
+    <!-- dotted texture -->
+    <g fill="#94a3b8" opacity="0.14">
+      <circle cx="72" cy="90" r="2"/><circle cx="104" cy="90" r="2"/><circle cx="136" cy="90" r="2"/><circle cx="168" cy="90" r="2"/>
+      <circle cx="72" cy="122" r="2"/><circle cx="104" cy="122" r="2"/><circle cx="136" cy="122" r="2"/><circle cx="168" cy="122" r="2"/>
+      <circle cx="472" cy="470" r="2"/><circle cx="504" cy="470" r="2"/><circle cx="536" cy="470" r="2"/><circle cx="568" cy="470" r="2"/>
+      <circle cx="472" cy="502" r="2"/><circle cx="504" cy="502" r="2"/><circle cx="536" cy="502" r="2"/><circle cx="568" cy="502" r="2"/>
+    </g>
+
+    <!-- orbit + code glyphs -->
+    <circle cx="320" cy="312" r="246" fill="none" stroke="url(#a-ring)" stroke-width="1.5" stroke-dasharray="3 9" opacity="0.7"/>
+    <circle cx="320" cy="312" r="214" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.12"/>
+    <text x="92" y="196" font-family="Consolas, monospace" font-size="40" font-weight="700" fill="#67e8f9" opacity="0.55">&lt;/&gt;</text>
+    <text x="486" y="438" font-family="Consolas, monospace" font-size="34" font-weight="700" fill="#a5b4fc" opacity="0.5">{ }</text>
+    <rect x="486" y="168" width="26" height="26" rx="8" fill="#22d3ee" opacity="0.25" transform="rotate(18 499 181)"/>
+    <circle cx="130" cy="440" r="10" fill="#818cf8" opacity="0.4"/>
+    <circle cx="118" cy="418" r="4" fill="#22d3ee" opacity="0.6"/>
+
+    <!-- body -->
+    <path d="M138 640c8-118 76-172 182-172s174 54 182 172Z" fill="url(#a-hoodie)"/>
+    <path d="M138 640c5-74 33-121 82-148l16 86 84 62 84-62 16-86c49 27 77 74 82 148Z" fill="#312e81" opacity="0.55"/>
+
+    <!-- neck -->
+    <path d="M282 388h76v78c0 20-76 20-76 0Z" fill="#d99a70"/>
+    <path d="M282 388h76v26c-20 16-56 16-76 0Z" fill="#c98a61" opacity="0.7"/>
+
+    <!-- collar -->
+    <path d="M254 492c18 34 44 54 66 54s48-20 66-54l24 18c-24 46-56 68-90 68s-66-22-90-68Z" fill="#3f3aa8"/>
+    <path d="M300 534v56a10 10 0 0 0 20 0v-44M340 534v56a10 10 0 0 1-20 0" fill="none" stroke="#c7d2fe" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="300" cy="598" r="6" fill="#c7d2fe"/>
+    <circle cx="340" cy="598" r="6" fill="#c7d2fe"/>
+
+    <!-- ears -->
+    <ellipse cx="224" cy="322" rx="18" ry="24" fill="#e2a97f"/>
+    <ellipse cx="416" cy="322" rx="18" ry="24" fill="#e2a97f"/>
+
+    <!-- head -->
+    <ellipse cx="320" cy="312" rx="96" ry="112" fill="url(#a-skin)"/>
+    <path d="M224 330c12 18 24 24 30 12M416 330c-12 18-24 24-30 12" fill="none" stroke="#c98a61" stroke-width="5" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- hair -->
+    <path d="M224 306c-8-92 30-140 96-140s104 48 96 140c-8-40-24-62-52-70-12-16-26-22-44-22s-32 6-44 22c-28 8-44 30-52 70Z" fill="url(#a-hair)"/>
+    <path d="M256 214c14-26 36-40 64-40 20 0 38 8 52 22-30-6-56 4-70 30-14-12-30-16-46-12Z" fill="#334155" opacity="0.7"/>
+
+    <!-- eyebrows -->
+    <path d="M254 292c16-10 34-10 50-2M336 290c16-8 34-8 50 2" fill="none" stroke="#1f2937" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- glasses -->
+    <rect x="248" y="304" width="62" height="42" rx="14" fill="#0f172a" opacity="0.12"/>
+    <rect x="330" y="304" width="62" height="42" rx="14" fill="#0f172a" opacity="0.12"/>
+    <rect x="248" y="304" width="62" height="42" rx="14" fill="none" stroke="#1e293b" stroke-width="5"/>
+    <rect x="330" y="304" width="62" height="42" rx="14" fill="none" stroke="#1e293b" stroke-width="5"/>
+    <path d="M310 322h20M248 320l-16 2M392 320l16 2" fill="none" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- eyes -->
+    <circle cx="279" cy="324" r="6.5" fill="#111827"/>
+    <circle cx="361" cy="324" r="6.5" fill="#111827"/>
+    <circle cx="281.5" cy="321.5" r="2" fill="#fff" opacity="0.9"/>
+    <circle cx="363.5" cy="321.5" r="2" fill="#fff" opacity="0.9"/>
+
+    <!-- nose + smile -->
+    <path d="M318 334c-4 12-2 20 4 22" fill="none" stroke="#c98a61" stroke-width="5" stroke-linecap="round"/>
+    <path d="M296 360c14 14 34 14 48 0" fill="none" stroke="#a85f45" stroke-width="6" stroke-linecap="round"/>
+    <path d="M304 372c10 6 22 6 32 0" fill="none" stroke="#f8d8c0" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- bottom fade -->
+    <rect x="0" y="590" width="640" height="50" fill="#070b14" opacity="0.35"/>
+  </g>
+  <rect x="0.75" y="0.75" width="638.5" height="638.5" rx="63.25" fill="none" stroke="#94a3b8" stroke-opacity="0.16" stroke-width="1.5"/>
+</svg>
